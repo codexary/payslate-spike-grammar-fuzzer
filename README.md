@@ -31,6 +31,8 @@ The local acceptance check is a reachability proxy, not the product oracle. It d
 
 For this experiment, a header without data and quoted newlines are rejected; ADR 0003 leaves the product's quoted-newline policy undecided. CSV parsing follows Python's `csv` module, and header selection is a small local heuristic. The check does not implement the product importer, HTTP handling, streaming limits or downstream payroll rules. Files with the optional extra columns are rejected as `unknown_header`. The eventual product campaign must judge inputs by the HTTP response and verify parsed values at the product boundary.
 
+The measured runs and recommendations are in [FINDINGS.md](FINDINGS.md).
+
 ## About this repository
 
 Elsworne, Payslate and the team are fictional.
